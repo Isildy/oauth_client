@@ -1,0 +1,21 @@
+<h1>Wellсome!</h1>
+
+<% if current_user %>
+    Ohh..you're already here
+  <%= form_tag tasks_path do %>
+    <%= text_field_tag :name %>
+    <%= submit_tag "Add" %>
+  <% end %>
+
+
+  <p id="logged_in">
+    Logged in as <strong><%= current_user.name %></strong>.
+    <%= link_to "Sign Out", signout_path %>
+  </p>
+<% else %>
+
+
+    <p>
+    <%= link_to "Let's knock on the remote service ..", "/auth/todo" %>
+  </p>
+<% end %>

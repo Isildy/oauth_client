@@ -1,0 +1,6 @@
+development:
+  LOAD_PARAGRAPHS_COUNT:       20
+  OAUTH_ID:
+  OAUTH_SECRET:
+
+production:
